@@ -594,7 +594,7 @@ describe(`StrategyHandler`, function() {
       const cachePutStub = sandbox.stub(cache, 'put').resolves();
 
       const firstPluginReturnValue = new Request('/firstPlugin', {
-        method:'get',
+        method: 'get',
       });
 
       const firstPlugin = {
