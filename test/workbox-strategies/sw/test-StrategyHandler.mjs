@@ -594,7 +594,7 @@ describe(`StrategyHandler`, function() {
       const cachePutStub = sandbox.stub(cache, 'put').resolves();
 
       const firstPluginReturnValue = new Request('/firstPlugin', {
-        method:'get'
+        method:'get',
       });
 
       const firstPlugin = {
@@ -610,9 +610,9 @@ describe(`StrategyHandler`, function() {
       const spyTwo = sandbox.spy(secondPlugin, 'cacheKeyWillBeUsed');
 
       const initialRequest = new Request('/noPlugin', {
-        method: 'post'
+        method: 'post',
       });
-      
+
       const response = new Response('Test response.');
 
       const handler = createStrategyHandler({
